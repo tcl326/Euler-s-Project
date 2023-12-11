@@ -1,7 +1,7 @@
 
 def main():
     res = 0
-    for i in range(1, 100 + 1):
+    for i in range(1, 9 + 1):
         for j in range(1, 100 + 1):
             if len(str(i ** j)) == j:
                 print(i ** j)
