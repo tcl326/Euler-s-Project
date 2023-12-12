@@ -8,12 +8,10 @@ def main():
     for i in range(2, 10_000 + 1):
         if math.sqrt(i).is_integer():
             continue
-        r, p = continued_fractions.sqrt(i)
+        _, p = continued_fractions.sqrt(i)
         if len(p) % 2 == 1:
             res += 1
     return res
-
-
 
 
 if __name__ == "__main__":
