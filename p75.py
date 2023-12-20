@@ -22,7 +22,7 @@ def primitive_pythagorean_triples() -> Iterable[Tuple[int, int, int]]:
     for m, n in odd_odd_co_prime_pair():
         m2 = m ** 2
         n2 = n ** 2
-        yield sorted((m * n, (m2 - n2) // 2, (m2 + n2) // 2))
+        yield (m * n, (m2 - n2) // 2, (m2 + n2) // 2)
 
 
 
@@ -38,7 +38,6 @@ def main(n: int) -> int:
             counter[s * k] += 1
             k += 1
     r = sum([1 for c in counter.values() if c == 1])
-    # print(counter)
     return r
         
 
